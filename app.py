@@ -8,13 +8,33 @@ print("Date and Time:", current_time)
 print("Type 'exit' to quit")
 
 symptoms = {
-    "fever": "Drink plenty of water and consult a doctor if symptoms persist.",
-    "cough": "Stay hydrated and consult a doctor if the cough continues.",
+    "fever": "Possible Viral Fever. Drink plenty of water and take rest.",
+    "cough": "Stay hydrated and consult a doctor if the cough persists.",
     "headache": "Take adequate rest and drink plenty of water.",
     "cold": "Take rest and drink warm fluids.",
-    "stomach pain": "Eat light food and consult a doctor if the pain continues."
+    "stomach pain": "Eat light food and consult a doctor if pain continues.",
+    "dengue": "High fever and joint pain. Seek medical attention.",
+    "malaria": "Fever with chills and sweating. Consult a doctor.",
+    "covid": "Fever, cough, and fatigue. Follow health guidelines.",
+    "diabetes": "Monitor blood sugar levels and consult a doctor.",
+    "asthma": "Avoid triggers and keep inhalers available.",
+    "typhoid": "Persistent fever and weakness. Medical treatment required.",
+    "cholera": "Severe diarrhea and dehydration. Seek immediate care.",
+    "tuberculosis": "Persistent cough and weight loss. Consult a doctor.",
+    "pneumonia": "Chest pain and breathing difficulty. Medical attention needed.",
+    "allergy": "Avoid allergens and take prescribed medication.",
+    "migraine": "Rest in a quiet room and stay hydrated.",
+    "anemia": "Eat iron-rich foods and consult a doctor.",
+    "jaundice": "Yellowing of skin and eyes. Medical consultation required.",
+    "arthritis": "Joint pain and stiffness. Regular exercise may help.",
+    "food poisoning": "Drink ORS and avoid oily foods.",
+    "dehydration": "Increase water intake immediately.",
+    "skin rash": "Keep skin clean and avoid irritants.",
+    "vomiting": "Drink small amounts of water frequently.",
+    "diarrhea": "Use ORS and stay hydrated.",
+    "chest pain": "Seek immediate medical attention.",
+    "back pain": "Take rest and maintain proper posture."
 }
-
 while True:
     user_input = input("\nEnter your symptom: ").lower()
 

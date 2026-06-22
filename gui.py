@@ -4,33 +4,56 @@ import tkinter as tk
 def check_symptom():
     symptom = entry.get().lower()
 
-    if symptom == "fever":
-        result.config(
-            text="🟢 Drink plenty of fluids and take rest.",
-            fg="green"
-        )
+    symptoms = {
+        "fever": "🟢 Drink plenty of fluids and take rest.",
+        "cough": "🔵 Stay hydrated and consult a doctor if the cough continues.",
+        "headache": "🟣 Take rest and avoid stress.",
+        "cold": "🟢 Take rest and drink warm fluids.",
+        "stomach pain": "🟠 Eat light food and consult a doctor if pain continues.",
+        "dengue": "🔴 High fever, joint pain and weakness. Seek medical attention.",
+        "malaria": "🟠 Fever with chills and sweating. Consult a doctor.",
+        "covid": "🟡 Fever, cough and fatigue. Follow health guidelines.",
+        "typhoid": "🔴 Persistent fever and weakness. Medical treatment required.",
+        "cholera": "🔴 Severe diarrhea and dehydration. Seek immediate care.",
+        "tuberculosis": "🔴 Persistent cough and weight loss. Consult a doctor.",
+        "pneumonia": "🔴 Chest pain and breathing difficulty. Seek medical care.",
+        "asthma": "🟠 Breathing difficulty and wheezing. Avoid triggers.",
+        "diabetes": "🟡 Monitor blood sugar levels and consult a doctor.",
+        "allergy": "🟢 Avoid allergens and take prescribed medication.",
+        "migraine": "🟣 Rest in a quiet room and stay hydrated.",
+        "anemia": "🟠 Eat iron-rich foods and consult a doctor.",
+        "jaundice": "🟡 Yellowing of skin and eyes. Medical consultation required.",
+        "arthritis": "🟢 Joint pain and stiffness. Regular exercise may help.",
+        "food poisoning": "🟠 Drink ORS and avoid oily foods.",
+        "dehydration": "🟡 Increase water intake immediately.",
+        "skin rash": "🟢 Keep skin clean and avoid irritants.",
+        "vomiting": "🟠 Drink small amounts of water frequently.",
+        "diarrhea": "🟠 Use ORS and stay hydrated.",
+        "chest pain": "🔴 Seek immediate medical attention.",
+        "back pain": "🟢 Take rest and maintain proper posture.",
+        "ear pain": "🟠 Avoid inserting objects into the ear and consult a doctor.",
+        "eye pain": "🟠 Avoid rubbing the eyes and seek medical advice.",
+        "sore throat": "🟢 Drink warm fluids and get adequate rest.",
+        "high blood pressure": "🟡 Reduce salt intake and consult a doctor.",
+        "low blood pressure": "🟡 Drink fluids and seek medical advice.",
+        "obesity": "🟢 Maintain a healthy diet and exercise regularly.",
+        "constipation": "🟢 Eat fiber-rich foods and drink more water.",
+        "acidity": "🟠 Avoid spicy foods and eat smaller meals.",
+        "stress": "🟢 Practice relaxation techniques and get enough sleep.",
+        "anxiety": "🟢 Exercise regularly and seek support if needed.",
+        "insomnia": "🟢 Maintain a regular sleep schedule.",
+        "heart disease": "🔴 Follow medical advice and maintain a healthy lifestyle.",
+        "kidney stones": "🟠 Drink plenty of water and consult a doctor.",
+        "liver disease": "🔴 Avoid alcohol and seek medical care.",
+        "bronchitis": "🟠 Rest well and stay hydrated.",
+        "sinusitis": "🟢 Use steam inhalation and consult a doctor if needed."
+    }
 
-    elif symptom == "cough":
-        result.config(
-            text="🔵 Stay hydrated and consult a doctor if the cough continues.",
-            fg="blue"
-        )
-
-    elif symptom == "headache":
-        result.config(
-            text="🟣 Take rest and avoid stress.",
-            fg="purple"
-        )
-
-    elif symptom == "cold":
-        result.config(
-            text="🟢 Drink warm water and get enough sleep.",
-            fg="green"
-        )
-
+    if symptom in symptoms:
+        result.config(text=symptoms[symptom], fg="green")
     else:
         result.config(
-            text="🔴 Symptom not found. Please consult a doctor.",
+            text="❌ Symptom not found. Please consult a healthcare professional.",
             fg="red"
         )
 
