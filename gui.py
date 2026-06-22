@@ -120,7 +120,82 @@ clear_btn = tk.Button(
     height=1,
     command=clear_all
 )
-clear_btn.pack()
+clear_btn.pack()                                                
+# Weight Input
+weight_label = tk.Label(
+    root,
+    text="Weight (kg):",
+    font=("Arial", 12),
+    bg="#DFF6FF"
+)
+weight_label.pack()
+
+weight_entry = tk.Entry(
+    root,
+    font=("Arial", 12),
+    width=15
+)
+weight_entry.pack(pady=5)
+
+# Height Input
+height_label = tk.Label(
+    root,
+    text="Height (m):",
+    font=("Arial", 12),
+    bg="#DFF6FF"
+)
+height_label.pack()
+
+height_entry = tk.Entry(
+    root,
+    font=("Arial", 12),
+    width=15
+)
+height_entry.pack(pady=5)
+
+# BMI Function
+def calculate_bmi():
+    try:
+        weight = float(weight_entry.get())
+        height = float(height_entry.get())
+
+        bmi = weight / (height ** 2)
+
+        if bmi < 18.5:
+            category = "Underweight"
+        elif bmi < 25:
+            category = "Normal Weight"
+        elif bmi < 30:
+            category = "Overweight"
+        else:
+            category = "Obese"
+
+        bmi_result.config(
+            text=f"BMI: {bmi:.2f} | Category: {category}"
+        )
+
+    except:
+        bmi_result.config(text="Enter valid values!")
+
+# BMI Button
+bmi_btn = tk.Button(
+    root,
+    text="Calculate BMI",
+    font=("Arial", 12, "bold"),
+    bg="green",
+    fg="white",
+    command=calculate_bmi
+)
+bmi_btn.pack(pady=10)
+
+# BMI Result
+bmi_result = tk.Label(
+    root,
+    text="",
+    font=("Arial", 12, "bold"),
+    bg="#DFF6FF"
+)
+bmi_result.pack()
 
 # Result Box
 result = tk.Label(
